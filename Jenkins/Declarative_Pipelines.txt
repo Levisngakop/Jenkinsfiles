@@ -18,7 +18,7 @@ stages {
         steps {
             script {
                 try {
-                    echo 'Building the code into an artifact'
+                    echo 'Building the code into an artifact using maven build tool'
                     sh 'mvn package'
                 } catch (Exception e2) {
                     mail bcc: '', body: 'git failed to build the code', cc: 'levisngakop47@gmail.com', from: '', replyTo: '', subject: 'Git build fail', to: 'levisngakop47@gmail.com'
